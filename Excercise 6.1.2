@@ -1,0 +1,80 @@
+var checkerboard = [[null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null],
+                    [null,null,null,null,null,null,null,null]];
+function setSquare(player, row, col) {
+    // Your Code Here
+    checkerboard[row][col] = player;
+}
+
+function getPieceAt(row, col) {
+    // Your Code Here
+    return(checkerboard[row][col]);
+}
+
+function clearBoard(){
+    return null;
+}
+
+function setUpRed(){
+    for (var x = 0; x < checkerboard[0].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[0][x] = 'R';
+        } else {
+            checkerboard[0][x] = null;
+    }
+    }
+    
+    for (x = 0; x < checkerboard[1].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[1][x] = null;
+        } else {
+            checkerboard[1][x] = 'R';
+    }
+    }
+    
+    for (x = 0; x < checkerboard[2].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[2][x] = 'R';
+        } else {
+            checkerboard[2][x] = null;
+    }
+    }
+    return checkerboard;
+}
+
+function setUpBlack(){
+        for (var x = 0; x < checkerboard[5].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[5][x] = null;
+        } else {
+            checkerboard[5][x] = 'B';
+    }
+    }
+    
+    for (x = 0; x < checkerboard[6].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[6][x] = 'B';
+        } else {
+            checkerboard[6][x] = null;
+    }
+    }
+    
+    for (x = 0; x < checkerboard[7].length; x += 1){
+        if (x % 2 === 0){
+            checkerboard[7][x] = null;
+        } else {
+            checkerboard[7][x] = 'B';
+    }
+    }
+    return checkerboard;
+}
+
+//checkerboard = checkerboard.map(clearBoard);
+
+//console.log(setUpRed());
+//console.log(setUpBlack());

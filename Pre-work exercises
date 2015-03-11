@@ -1,0 +1,92 @@
+
+Exercise 6.2
+
+Each value in new_array is the square of the value of its corresponding element in old_array? ([1,2,3] becomes [1,4,9]):
+
+var old_array = [12,45,6,23,19,20,20,15,30,42];
+var new_array = [];
+
+for (var i = 0; i < old_array.length; i += 1) {
+    new_array.push(old_array[i] * old_array[i]); 
+}
+console.log(new_array);
+
+
+
+
+Every odd-indexed value in new_array is double its corresponding element in old_array, while every even-indexed value is unchanged? ([3,4,5,2,6] becomes [3,8,5,4,6]):
+
+var old_array = [12,45,6,23,19,20,20,15,30,42];
+var new_array = [];
+
+for (var i = 0; i < old_array.length; i += 1) {
+    if (i%2 === 0) {
+    new_array.push(old_array[i]); 
+} else {
+    new_array.push(old_array[i]*2);
+}
+}
+console.log(new_array);
+
+
+
+
+
+new_array is the exact mirror image of old_array? ([1,2,3] becomes [3,2,1]):
+
+var old_array = [12,45,6,23,19,20,20,15,30,42];
+var new_array = [];
+
+for (var i = (old_array.length - 1); i >= 0; i -= 1) {
+    new_array.push(old_array[i]);
+}
+console.log(new_array);
+
+
+
+
+
+
+
+Try to implement each of the following things in repl.it using .map() and .forEach()
+
+Start with a variable x and an array of your choosing. Write an expression that will increase x by 10 once for every element in the array.
+
+var x;
+var old_array = [4, 8, 6, 7, 12, 49];
+
+function IncreaseByTen(x){
+    console.log(x + 10)
+    return x + 10;
+}
+var new_array = old_array.map(IncreaseByTen);
+console.log(new_array);
+
+
+
+
+Create an array of masses in kilograms, and use it to produce an array of those same masses in pounds (hint: it's roughly 2.2 pounds to the kilogram).
+
+var x;
+var old_array = [11, 38, 56, 17, 2, 49];
+
+function ConvertKgsToLbs(x){
+    console.log(x * 2.2)
+    return x * 2.2;
+}
+var new_array = old_array.forEach(ConvertKgsToLbs);
+/*console.log(new_array);*/
+
+
+
+
+
+Believe it or not, Strings have a .length property just like arrays do. Armed with this knowledge, create an array of strings, and use an iterator to produce an array containing the length of each string.
+
+var x;
+var old_array = ['cart', 'dog', 'cattle', 'building'];
+function LengthOfString(x){
+    console.log(old_array[x].length);
+}
+
+var new_array = old_array.map(LengthOfString);
